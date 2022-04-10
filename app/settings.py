@@ -150,19 +150,18 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_SSL = True
-EMAIL_HOST = env('EMAIL_HOST')
-EMAIL_PORT = env('EMAIL_PORT')
-EMAIL_HOST_USER = env('EMAIL_HOST_USER')
-EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
+EMAIL_HOST = 'smtp.mail.yahoo.com'
+EMAIL_PORT = '465'
+EMAIL_HOST_USER = 'test_email99@yahoo.com'
+EMAIL_HOST_PASSWORD = 'krkvrqygvvpmprsp'
+
 
 # 3rd party Settings
 # CORS
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    env('CORS_WHITELIST')
-]
+    'http://127.0.0.1:5500']
 # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
 CORS_ORIGIN_REGEX_WHITELIST = [
-    env('CORS_WHITELIST')
-]
+    'http://127.0.0.1:5500']
