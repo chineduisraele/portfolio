@@ -10,7 +10,6 @@ from message.models import Message
 @receiver(post_save, sender=Message)
 def NotifyMe(sender, instance, created, *args, **kwargs):
     if created:
-        pass
-        # message = f'{instance.email} sent you a message. {instance.message}'
-        # send_mail("PORTFOLIO NEW MESSAGE", message,
-        #           EMAIL_HOST_USER, ["chineduie01@gmail.com"])
+        message = f'{instance.email} sent you a message. {instance.message}'
+        send_mail("PORTFOLIO NEW MESSAGE", message,
+                  EMAIL_HOST_USER, ["chineduie01@gmail.com"])
