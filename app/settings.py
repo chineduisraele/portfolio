@@ -26,7 +26,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-)el=$+d81muz7axgk9ooks207r_*n)-yi(=t9g4*)bxleop$q0'
-SECRET_KEY = env('SECRET_KEY')
+SECRET_KEY = "django-insecure-el$+ d81muz7axgk9ooks207r_*nyuajsuzjzjjs-yiqrtsmt9g4*bxleop$q0"
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
@@ -134,7 +134,7 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 STATICFILES_DIR = BASE_DIR/'staticfiles/'
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+STATIC_ROOT = BASE_DIR/'staticfiles/'
 
 # media
 MEDIA_URL = 'media/'
