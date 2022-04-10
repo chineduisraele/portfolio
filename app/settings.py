@@ -26,13 +26,12 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 
 # SECURITY WARNING: keep the secret key used in production secret!
 # SECRET_KEY = 'django-insecure-)el=$+d81muz7axgk9ooks207r_*n)-yi(=t9g4*)bxleop$q0'
-SECRET_KEY = "django-insecure-el$+ d81muz7axgk9ooks207r_*nyuajsuzjzjjs-yiqrtsmt9g4*bxleop$q0"
+SECRET_KEY = env('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False
 
-ALLOWED_HOSTS = ['chineduisraeleportfolio.herokuapp.com',
-                 '127.0.0.1']
+ALLOWED_HOSTS = [env('ALLOWED_HOSTS1'), env('ALLOWED_HOSTS2')]
 
 
 # Application definition
@@ -150,18 +149,17 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # Email
 EMAIL_BACKEND = 'django.core.mail.backends.smtp.EmailBackend'
 EMAIL_USE_SSL = True
-EMAIL_HOST = 'smtp.mail.yahoo.com'
-EMAIL_PORT = '465'
-EMAIL_HOST_USER = 'test_email99@yahoo.com'
-EMAIL_HOST_PASSWORD = 'krkvrqygvvpmprsp'
-
+EMAIL_HOST = env('EMAIL_HOST')
+EMAIL_PORT = env('EMAIL_PORT')
+EMAIL_HOST_USER = env('EMAIL_HOST_USER')
+EMAIL_HOST_PASSWORD = env('EMAIL_HOST_PASSWORD')
 
 # 3rd party Settings
 # CORS
 CORS_ORIGIN_ALLOW_ALL = False
 CORS_ALLOW_CREDENTIALS = True
 CORS_ORIGIN_WHITELIST = [
-    'http://127.0.0.1:5500']
+    env('CORS_WHITELIST')]
 # If this is used, then not need to use `CORS_ORIGIN_ALLOW_ALL = True`
 CORS_ORIGIN_REGEX_WHITELIST = [
-    'http://127.0.0.1:5500']
+    env('CORS_WHITELIST')]
