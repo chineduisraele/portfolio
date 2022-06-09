@@ -8,8 +8,11 @@ Aside delivering a modern UI/Ux, this site is SEO-optimized and accessibility fr
 ### Tools
 
 Frontend - Built with HTML, SASS, Vanilla Js
+
 Backend - Django
+
 Database - PostgreSql
+
 Hosting - Frontend hosted on Netlify, Backend hosted on Heroku
 
 No third party front end libraries or frameworks
